@@ -14,7 +14,6 @@ class BroadcastTitle extends Task {
 
 
 	public function __construct(Player $player){
-		$this->plugin = $plugin;
 		$this->player = $player;
 		$this->msg = WelcomeMessage::getInstance()->getMessage();
 	}
