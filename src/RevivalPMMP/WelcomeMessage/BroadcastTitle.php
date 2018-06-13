@@ -4,17 +4,17 @@ namespace RevivalPMMP\WelcomeMessage;
 
 
 use pocketmine\Player;
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
 
-class BroadcastTitle extends PluginTask {
+class BroadcastTitle extends Task {
 
 	private $player;
 	private $msg;
 
 
 	public function __construct(Player $player){
-		parent::__construct(WelcomeMessage::getInstance());
+		$this->WelcomeMessage::getInstance() = $plugin
 		$this->player = $player;
 		$this->msg = WelcomeMessage::getInstance()->getMessage();
 	}
